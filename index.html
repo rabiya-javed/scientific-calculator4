@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    .calculator {
+      margin: 0 auto;
+      margin-top: 100px;
+      width: 500px;
+      background-color: #73ffc9;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px rgba(255, 93, 93, 0.158);
+    }
+
+    .result {
+      height: 50px;
+      background-color: lightslategray;
+      margin-bottom: 20px;
+      text-align: right;
+      padding: 10px;
+      font-size: 24px;
+    }
+
+    
+    .row button{
+  width: 100px;
+  height: 50px;
+  font-size: 15px;
+  border: dotted;
+  outline: double;
+  margin: 5px;
+  border-radius: 8px;
+  background-color:rgba(196, 226, 27, 0.349);
+  row-gap: 1px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="calculator">
+      <div class="result" id="result">0</div>
+      <div class="row">
+        <button class="btn btn-light" onclick="clearResult()">C</button>
+        <button class="btn btn-light" onclick="deleteLast()">DEL</button>
+        <button class="btn btn-light" onclick="calculate('=')">=</button>
+        <button class="btn btn-light" onclick="append('-')">-</button>
+      </div>
+      <div class="row">
+        <button class="btn btn-light" onclick="append('7')">7</button>
+        <button class="btn btn-light" onclick="append('8')">8</button>
+        <button class="btn btn-light" onclick="append('9')">9</button>
+        <button class="btn btn-light" onclick="append('*')">*</button>
+      </div>
+      <div class="row">
+        <button class="btn btn-light" onclick="append('4')">4</button>
+        <button class="btn btn-light" onclick="append('5')">5</button>
+        <button class="btn btn-light" onclick="append('6')">6</button>
+        <button class="btn btn-light" onclick="append('/')">/</button>
+      </div>
+      <div class="row">
+        <button class="btn btn-light" onclick="append('1')">1</button>
+        <button class="btn btn-light" onclick="append('2')">2</button>
+        <button class="btn btn-light" onclick="append('3')">3</button>
+        <button class="btn btn-light" onclick="append('|x|')">^</button>
+      </div>
+      <div class="row">
+        <button class="btn btn-light" onclick="append('0')">0</button>
+        <button class="btn btn-light" onclick="append('x3')">x3</button>
+        <button class="btn btn-light" onclick="append('(')">(</button>
+        <button class="btn btn-light" onclick="append(')')">)</button>
+    </div>
+    <div class="row">
+        <button class="btn btn-light" onclick="append('.')">.</button>
+        <button class="btn btn-light" onclick="append('+')">+</button>
+        <button class="btn btn-light" onclick="append('exp')">exp</button>
+        <button class="btn btn-light" onclick="append('>')">></button>
+    </div>
+    <div class="row">
+        <button class="btn btn-light" onclick="append('<')"><</button>
+        <button class="btn btn-light" onclick="append(00)">00</button>
+        <button class="btn btn-light" onclick="append('sin')">sin</button>
+        <button class="btn btn-light" onclick="append('cos')">cos</button>
+    </div>
+    <div class="row">
+        <button class="btn btn-light" onclick="append('tan')">tan</button>
+        <button class="btn btn-light" onclick="append('log.')">log.</button>
+        <button class="btn btn-light" onclick="append('1/x')">1/x</button>
+        <button class="btn btn-light" onclick="append('π')">π</button>
+    </div>
+    <div class="row">
+        <button class="btn btn-light" onclick="append('x2')">x2</button>
+        <button class="btn btn-light" onclick="append('mod')">mod</button>
+        <button class="btn btn-light" onclick="append('xy')">xy</button>
+        <button class="btn btn-light" onclick="append('y')">y</button>
+    </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
